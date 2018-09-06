@@ -5,14 +5,17 @@ public class Curso {
 	private String nome;
 	private int cargaHoraria;
 	private float valor;
+	private Coordenador coordenador;
 	
 	
-public Curso(String nome, int cargaHoraria,	float valor) {
-		
+	
+public Curso(String nome, int cargaHoraria, float valor, Coordenador coordenador) {		
 		this.nome = nome;
 		this.cargaHoraria = cargaHoraria;
-		this.valor = valor;		
-	}	
+		this.valor = valor;
+		this.coordenador = coordenador;
+	}
+	
 
 
 	public void show() {
@@ -20,7 +23,9 @@ public Curso(String nome, int cargaHoraria,	float valor) {
 		System.out.printf("Nome: %s \n"
 				+ "Carga Horária: %d \n"
 				+"Valor: %.2f \n \n",				 
-				nome, cargaHoraria, valor);		
+				nome, cargaHoraria, valor);	
+		
+		coordenador.show();
 }
 
 
@@ -57,6 +62,18 @@ public Curso(String nome, int cargaHoraria,	float valor) {
 
 	public void setValor(float valor) {
 		this.valor = valor;
+	}
+
+
+
+	public Coordenador getCoordenador() {
+		return coordenador;
+	}
+
+
+
+	public void setCoordenador(Coordenador coordenador) {
+		this.coordenador = coordenador;
 	}
 	
 	
